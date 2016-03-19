@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="trip_id"
+      type="text"
+      label="COM_TRAVELENTITY_TRIP_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="trip_stage"
+      type="sql"
+      label="COM_TRAVELENTITY_TRIP_FIELD_STAGE"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as trip_stage from #__te_trip_stages) union (SELECT trip_stage_id AS value, trip_stage_name as trip_stage FROM #__te_trip_stages)"
+      default=""
+    />
+    <field
+      name="trip_name"
+      type="text"
+      label="COM_TRAVELENTITY_TRIP_FIELD_NAME"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="trip_alias"
+      type="text"
+      label="COM_TRAVELENTITY_TRIP_FIELD_ALIAS"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="trip_start_date"
+      type="date"
+      label="COM_TRAVELENTITY_TRIP_FIELD_DATE"
+      size="20"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="trip_descr"
+      type="textarea"
+      label="COM_TRAVELENTITY_TRIP_FIELD_DESCR"
+      rows="5"
+      cols="100"
+      default=""
+    />
+  </fieldset>
+</form>

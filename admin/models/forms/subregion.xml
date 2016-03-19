@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="subregion_id"
+      type="text"
+      label="COM_TRAVELENTITY_SUBREGION_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="subregion_region"
+      type="sql"
+      label="COM_TRAVELENTITY_SUBREGION_FIELD_REGION"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as subregion_region from #__te_regions) union (SELECT region_id AS value, region_name as subregion_region FROM #__te_regions)"
+      default=""
+    />
+    <field
+      name="subregion_name"
+      type="text"
+      label="COM_TRAVELENTITY_SUBREGION_FIELD_NAME"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="subregion_alias"
+      type="text"
+      label="COM_TRAVELENTITY_SUBREGION_FIELD_ALIAS"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

@@ -1,0 +1,1 @@
+"C:\Program Files\7-Zip\7z.exe" a -r com_travelentity.zip admin site travelentity.xml

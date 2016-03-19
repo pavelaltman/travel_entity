@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="post_point"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSPOST_FIELD_POINT_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="post_article_point_id"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSPOST_FIELD_ID_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="post_menuitem"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTSPOST_FIELD_MENUITEM_LABEL"
+      size="1"
+      class="inputbox"
+      query="SELECT id AS value, title as post_menuitem FROM #__menu WHERE published=1"
+      default=""
+    />
+    <field
+      name="post_article"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTSPOST_FIELD_ARTICLE_LABEL"
+      size="1"
+      class="inputbox"
+      query="SELECT id AS value, title as post_article FROM #__content WHERE state=1"
+      default=""
+    />
+  </fieldset>
+</form>

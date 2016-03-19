@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="region_id"
+      type="text"
+      label="COM_TRAVELENTITY_REGION_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="region_country"
+      type="sql"
+      label="COM_TRAVELENTITY_REGION_FIELD_COUNTRY"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as region_country from #__te_countries) union (SELECT country_id AS value, country_name as region_country FROM #__te_countries)"
+      default=""
+    />
+    <field
+      name="region_name"
+      type="text"
+      label="COM_TRAVELENTITY_REGION_FIELD_NAME"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="region_name_rod"
+      type="text"
+      label="COM_TRAVELENTITY_REGION_FIELD_NAMEROD"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="region_alias"
+      type="text"
+      label="COM_TRAVELENTITY_REGION_FIELD_ALIAS"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

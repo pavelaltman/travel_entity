@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="class_id"
+      type="text"
+      label="COM_TRAVELENTITY_POINTCLASS_FIELD_ID_LABEL"
+      description="COM_TRAVELENTITY_POINTCLASS_FIELD_ID_DESC"
+      size="10"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="class_name"
+      type="text"
+      label="COM_TRAVELENTITY_POINTCLASS_FIELD_NAME_LABEL"
+      description="COM_TRAVELENTITY_POINTCLASS_FIELD_NAME_DESC"
+      size="40"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

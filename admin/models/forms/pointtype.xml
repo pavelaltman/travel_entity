@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="point_type_id"
+      type="text"
+      label="COM_TRAVELENTITY_POINTTYPE_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="point_class"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTTTPE_FIELD_CLASS"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as point_class from #__te_point_classes) union (SELECT point_class_id AS value, point_class_name as point_class FROM #__te_point_classes)"
+      default=""
+    />
+    <field
+      name="point_type_name"
+      type="text"
+      label="COM_TRAVELENTITY_POINTTYPE_FIELD_NAME"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_type_name_pl"
+      type="text"
+      label="COM_TRAVELENTITY_POINTTYPE_FIELD_NAMEPL"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_type_alias"
+      type="text"
+      label="COM_TRAVELENTITY_POINTTYPE_FIELD_ALIAS"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_type_marker"
+      type="text"
+      label="COM_TRAVELENTITY_POINTTYPE_FIELD_MARKER"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

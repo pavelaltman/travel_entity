@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="point_subtype_id"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSUBTYPE_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="point_type"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTSUBTTPE_FIELD_TYPE"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as point_type from #__te_point_types) union (SELECT point_type_id AS value, point_type_name as point_type FROM #__te_point_types)"
+      default=""
+    />
+    <field
+      name="point_subtype_name"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSUBTYPE_FIELD_NAME"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_subtype_alias"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSUBTYPE_FIELD_ALIAS"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_subtype_marker"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSUBTYPE_FIELD_MARKER"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

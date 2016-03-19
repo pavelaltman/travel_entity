@@ -1,0 +1,15 @@
+<?php
+// No direct access to this file
+defined('_JEXEC') or die;
+?>
+<?php foreach($this->items as $i => $item): ?>
+  <tr class="row<?php echo $i % 2; ?>">
+  <td><?php echo JHtml::_('grid.id', $i, $item->photo_id); ?></td>
+  <td><?php echo $item->photo_name; ?></td>
+  <td>
+  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&task=pointpostphoto.edit&photo_id=' . $item->photo_id); ?>">
+  <?php echo $item->photo_path; ?>
+  </a>
+  </td>
+  </tr>
+<?php endforeach; ?>

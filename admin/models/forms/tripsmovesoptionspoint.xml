@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="trip_move_option_point_id"
+      type="text"
+      label="COM_TRAVELENTITY_TRIPSMOVESOPTIONPOINT_FIELD_ID"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="trip_move_option"
+      type="sql"
+      label="COM_TRAVELENTITY_TRIPSMOVESOPTIONPOINT_FIELD_TRIP_MOVE"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as trip_move_option_id from #__te_trips_moves_options) union (SELECT trip_move_option_id AS value, trip_move_option_comment AS trip_move_option_id FROM #__te_trips_moves_options)"
+      default=""
+    />
+    <field
+      name="option_point_id"
+      type="text"
+      label="COM_TRAVELENTITY_TRIPSMOVESOPTIONPOINT_FIELD_POINT"
+      size="10"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="option_comment"
+      type="text"
+      label="COM_TRAVELENTITY_TRIPSMOVESOPTIONPOINT_FIELD_COMMENT"
+      size="100"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

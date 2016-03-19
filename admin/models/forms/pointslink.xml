@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="link_point"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSLINK_FIELD_POINT_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="points_links_id"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSLINK_FIELD_LINKID_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="link_type"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTSLINK_FIELD_LINKTYPE_LABEL"
+      size="1"
+      class="inputbox"
+      query="SELECT link_type_id AS value, CONCAT(link_type_pre_label,' ',link_type_link_label,' ',link_type_post_label) as link_type FROM #__te_points_link_types"
+      default=""
+    />
+    <field
+      name="link_label"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSLINK_FIELD_LINKLABEL_LABEL"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="link_link"
+      type="text"
+      label="COM_TRAVELENTITY_POINTSLINK_FIELD_LINKLINK_LABEL"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+  </fieldset>
+</form>

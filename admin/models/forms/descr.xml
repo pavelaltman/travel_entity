@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field
+      name="mix_id"
+      type="text"
+      label="COM_TRAVELENTITY_DESCR_FIELD_ID_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="true"
+    />
+    <field
+      name="class_id"
+      type="sql"
+      label="COM_TRAVELENTITY_DESCR_FIELD_CLASS_LABEL"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as class_id from #__te_point_classes) union (SELECT point_class_id AS value, point_class_name as class_id FROM #__te_point_classes)"
+      default=""
+    />
+    <field
+      name="type_id"
+      type="sql"
+      label="COM_TRAVELENTITY_DESCR_FIELD_TYPE_LABEL"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as type_id from #__te_point_types) union (SELECT point_type_id AS value, point_type_name as type_id FROM #__te_point_types)"
+      default=""
+    />
+    <field
+      name="country_id"
+      type="sql"
+      label="COM_TRAVELENTITY_DESCR_FIELD_COUNTRY_LABEL"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as country_id from #__te_countries) union (SELECT country_id AS value, country_name as country_id FROM #__te_countries)"
+      default=""
+    />
+    <field
+      name="region_id"
+      type="sql"
+      label="COM_TRAVELENTITY_DESCR_FIELD_REGION_LABEL"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as region_id from #__te_regions) union (SELECT region_id AS value, region_name as region_id FROM #__te_regions)"
+      default=""
+    />
+    <field
+      name="short_descr"
+      type="textarea"
+      label="COM_TRAVELENTITY_DESCR_FIELD_SHORTDESCR_LABEL"
+      rows="5"
+      cols="100"
+      default=""
+    />
+    <field
+      name="long_descr"
+      type="textarea"
+      label="COM_TRAVELENTITY_DESCR_FIELD_LONGDESCR_LABEL"
+      rows="5"
+      cols="100"
+      default=""
+    />
+  </fieldset>
+</form>
