@@ -40,7 +40,7 @@
       label="COM_TRAVELENTITY_POINT_FIELD_SUBTYPE_LABEL"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as point_subtype from #__te_points) union (SELECT point_subtype_id AS value, CONCAT(point_class_name,' -> ',point_type_name,' -> ',point_subtype_name) as point_subtype FROM #__te_point_subtypes,#__te_point_types,#__te_point_classes WHERE point_type=point_type_id AND point_class=point_class_id ORDER BY point_class_name,point_type_name,point_subtype_name)"
+      query="(select NULL AS value, 'NULL' as point_subtype from dollsfun_points.#__te_points) union (SELECT point_subtype_id AS value, CONCAT(point_class_name,' -> ',point_type_name,' -> ',point_subtype_name) as point_subtype FROM dollsfun_points.#__te_point_subtypes,dollsfun_points.#__te_point_types,dollsfun_points.#__te_point_classes WHERE point_type=point_type_id AND point_class=point_class_id ORDER BY point_class_name,point_type_name,point_subtype_name)"
       default=""
     />
     <field
@@ -49,7 +49,7 @@
       label="COM_TRAVELENTITY_POINT_FIELD_SETTLEMENT_LABEL"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as point_settlement from #__te_points) union (SELECT settlement_id AS value, CONCAT(country_name,' -> ',region_name,' -> ',subregion_name,' -> ',settlement_name) as point_settlement FROM #__te_settlements, #__te_subregions, #__te_regions, #__te_countries WHERE settlement_subregion=subregion_id AND  subregion_region=region_id AND region_country=country_id ORDER BY country_name,region_name,subregion_name,settlement_name)"
+      query="(select NULL AS value, 'NULL' as point_settlement from dollsfun_points.#__te_points) union (SELECT settlement_id AS value, CONCAT(country_name,' -> ',region_name,' -> ',subregion_name,' -> ',settlement_name) as point_settlement FROM dollsfun_points.#__te_settlements, dollsfun_points.#__te_subregions, dollsfun_points.#__te_regions, dollsfun_points.#__te_countries WHERE settlement_subregion=subregion_id AND  subregion_region=region_id AND region_country=country_id ORDER BY country_name,region_name,subregion_name,settlement_name)"
       default=""
     />
     <field
@@ -90,7 +90,7 @@
       label="COM_TRAVELENTITY_POINT_FIELD_PARENT_LABEL"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as point_parent from #__te_points) union (SELECT point_id AS value, point_name as point_parent FROM #__te_points)"
+      query="(select NULL AS value, 'NULL' as point_parent from dollsfun_points.#__te_points) union (SELECT point_id AS value, point_name as point_parent FROM dollsfun_points.#__te_points)"
       default=""
     />
   </fieldset>

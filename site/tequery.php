@@ -15,3 +15,10 @@ class TEQuery extends JDatabaseQueryMySql
  public function join($left,$str) { return parent::join($left,$this->replace($str)) ; }
 }
 
+class TETable extends JTable
+{
+	function __construct($name,$key,&$db)
+	{
+		parent::__construct('dollsfun_points.'.$name, $key, $db);
+	}
+}

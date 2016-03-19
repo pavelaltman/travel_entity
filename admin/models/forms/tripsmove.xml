@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_TRIPSSTAYPOINT_FIELD_TRIP_ID"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as trip_id from #__te_trips) union (SELECT trip_id AS value, trip_name as trip_id FROM #__te_trips)"
+      query="(select NULL AS value, 'NULL' as trip_id from dollsfun_points.#__te_trips) union (SELECT trip_id AS value, trip_name as trip_id FROM dollsfun_points.#__te_trips)"
       default=""
     />
     <field

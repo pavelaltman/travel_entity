@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_POINTTTPE_FIELD_CLASS"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as point_class from #__te_point_classes) union (SELECT point_class_id AS value, point_class_name as point_class FROM #__te_point_classes)"
+      query="(select NULL AS value, 'NULL' as point_class from dollsfun_points.#__te_point_classes) union (SELECT point_class_id AS value, point_class_name as point_class FROM dollsfun_points.#__te_point_classes)"
       default=""
     />
     <field

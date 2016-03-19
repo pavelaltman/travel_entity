@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_TRIPSMOVESOPTION_FIELD_TRIP_MOVE"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as trip_move_id from #__te_trips_moves) union (SELECT trip_move_id AS value, trip_move_id FROM #__te_trips_moves)"
+      query="(select NULL AS value, 'NULL' as trip_move_id from dollsfun_points.#__te_trips_moves) union (SELECT trip_move_id AS value, trip_move_id FROM dollsfun_points.#__te_trips_moves)"
       default=""
     />
     <field

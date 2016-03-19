@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_SUBREGION_FIELD_REGION"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as subregion_region from #__te_regions) union (SELECT region_id AS value, region_name as subregion_region FROM #__te_regions)"
+      query="(select NULL AS value, 'NULL' as subregion_region from dollsfun_points.#__te_regions) union (SELECT region_id AS value, region_name as subregion_region FROM dollsfun_points.#__te_regions)"
       default=""
     />
     <field

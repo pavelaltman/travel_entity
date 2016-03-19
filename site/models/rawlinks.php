@@ -37,7 +37,7 @@ class TravelEntityModelRawLinks extends JModelList
 
       $dquery = new TEQuery($db) ;
       $conditions = array($db->quoteName('link_id') . '='.$del_link_id);
-      $dquery->delete($db->quoteName(query_replace('#__te_rawlinks')));
+      $dquery->delete('#__te_rawlinks');
       $dquery->where($conditions);
       $db->setQuery($dquery);
       $result = $db->query();

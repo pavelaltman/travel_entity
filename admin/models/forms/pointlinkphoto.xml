@@ -32,7 +32,7 @@
       label="COM_TRAVELENTITY_POINTSLINK_FIELD_LINKTYPE_LABEL"
       size="1"
       class="inputbox"
-      query="SELECT link_type_id AS value, CONCAT(link_type_pre_label,' ',link_type_link_label,' ',link_type_post_label) as link_type FROM #__te_points_link_types"
+      query="SELECT link_type_id AS value, CONCAT(link_type_pre_label,' ',link_type_link_label,' ',link_type_post_label) as link_type FROM dollsfun_points.#__te_points_link_types"
       default=""
     />
     <field

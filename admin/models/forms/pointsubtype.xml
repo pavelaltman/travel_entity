@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_POINTSUBTTPE_FIELD_TYPE"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as point_type from #__te_point_types) union (SELECT point_type_id AS value, point_type_name as point_type FROM #__te_point_types)"
+      query="(select NULL AS value, 'NULL' as point_type from dollsfun_points.#__te_point_types) union (SELECT point_type_id AS value, point_type_name as point_type FROM dollsfun_points.#__te_point_types)"
       default=""
     />
     <field

@@ -2,7 +2,9 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 jimport('joomla.database.table');
-class TravelEntityTableTripsMovesOptions extends JTable
+require_once JPATH_SITE.DS."components".DS."com_travelentity".DS."tequery.php";
+
+class TravelEntityTableTripsMovesOptions extends TETable
 {
   function __construct(&$db)
   {

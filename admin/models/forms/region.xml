@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_REGION_FIELD_COUNTRY"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as region_country from #__te_countries) union (SELECT country_id AS value, country_name as region_country FROM #__te_countries)"
+      query="(select NULL AS value, 'NULL' as region_country from dollsfun_points.#__te_countries) union (SELECT country_id AS value, country_name as region_country FROM dollsfun_points.#__te_countries)"
       default=""
     />
     <field

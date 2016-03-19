@@ -2,7 +2,9 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 jimport('joomla.database.table');
-class TravelEntityTablePointsLinks extends JTable
+require_once JPATH_SITE.DS."components".DS."com_travelentity".DS."tequery.php";
+
+class TravelEntityTablePointsLinks extends TETable
 {
   var $points_links_id = null;
 

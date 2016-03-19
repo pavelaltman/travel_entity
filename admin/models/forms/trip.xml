@@ -16,7 +16,7 @@
       label="COM_TRAVELENTITY_TRIP_FIELD_STAGE"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as trip_stage from #__te_trip_stages) union (SELECT trip_stage_id AS value, trip_stage_name as trip_stage FROM #__te_trip_stages)"
+      query="(select NULL AS value, 'NULL' as trip_stage from dollsfun_points.#__te_trip_stages) union (SELECT trip_stage_id AS value, trip_stage_name as trip_stage FROM dollsfun_points.#__te_trip_stages)"
       default=""
     />
     <field
