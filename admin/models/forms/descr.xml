@@ -62,5 +62,13 @@
       cols="100"
       default=""
     />
+    <field
+      name="long_descren"
+      type="textarea"
+      label="COM_TRAVELENTITY_DESCR_FIELD_LONGDESCR_LABEL_EN"
+      rows="5"
+      cols="100"
+      default=""
+    />
   </fieldset>
 </form>

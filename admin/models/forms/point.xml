@@ -19,9 +19,25 @@
       default=""
     />
     <field
+      name="point_nameen"
+      type="text"
+      label="COM_TRAVELENTITY_POINT_FIELD_NAME_LABEL_EN"
+      size="60"
+      class="inputbox"
+      default=""
+    />
+    <field
       name="point_name_rod"
       type="text"
       label="COM_TRAVELENTITY_POINT_FIELD_NAME_ROD_LABEL"
+      size="60"
+      class="inputbox"
+      default=""
+    />
+    <field
+      name="point_name_roden"
+      type="text"
+      label="COM_TRAVELENTITY_POINT_FIELD_NAME_ROD_LABEL_EN"
       size="60"
       class="inputbox"
       default=""
@@ -80,6 +96,14 @@
       name="point_descr"
       type="textarea"
       label="COM_TRAVELENTITY_POINT_FIELD_DESCR_LABEL"
+      rows="5"
+      cols="100"
+      default=""
+    />
+    <field
+      name="point_descren"
+      type="textarea"
+      label="COM_TRAVELENTITY_POINT_FIELD_DESCR_LABEL_EN"
       rows="5"
       cols="100"
       default=""

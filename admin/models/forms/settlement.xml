@@ -37,6 +37,14 @@
       default=""
     />
     <field
+      name="settlement_nameen"
+      type="text"
+      label="COM_TRAVELENTITY_SETTLEMENT_FIELD_NAME_EN"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
       name="settlement_alias"
       type="text"
       label="COM_TRAVELENTITY_SETTLEMENT_FIELD_ALIAS"

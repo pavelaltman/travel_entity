@@ -28,6 +28,14 @@
       default=""
     />
     <field
+      name="subregion_nameen"
+      type="text"
+      label="COM_TRAVELENTITY_SUBREGION_FIELD_NAME_EN"
+      size="80"
+      class="inputbox"
+      default=""
+    />
+    <field
       name="subregion_alias"
       type="text"
       label="COM_TRAVELENTITY_SUBREGION_FIELD_ALIAS"
