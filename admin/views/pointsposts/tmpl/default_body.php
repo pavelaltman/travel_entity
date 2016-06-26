@@ -11,10 +11,5 @@ defined('_JEXEC') or die;
   <?php echo $item->articletitle; ?>
   </a>
   </td>
-  <td>
-  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointpostphotos&article_point_id=' . $item->post_article_point_id); ?>">
-  <?php echo JText::_('COM_TRAVELENTITY_POINT_LIST_POSTPHOTOLISTLABEL'); ?>
-  </a>
-  </td>
   </tr>
 <?php endforeach; ?>

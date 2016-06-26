@@ -21,4 +21,7 @@ defined('_JEXEC') or die;
   <th>
   <?php echo JText::_('COM_TRAVELENTITY_POINT_HEADING_POSTSLIST'); ?>
   </th>
+  <th>
+  <?php echo JText::_('COM_TRAVELENTITY_POINT_HEADING_POINTSLIST'); ?>
+  </th>
 </tr>

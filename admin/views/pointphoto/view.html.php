@@ -27,8 +27,8 @@ class TravelEntityViewPointPostPhoto extends JView
   {
     JRequest::setVar('hidemainmenu', true);
     $isNew = ($this->item->photo_id == 0);
-    JToolBarHelper::title($isNew ? JText::_('COM_TRAVELENTITY_MANAGER_POINTPOSTPHOTO_NEW') : JText::_('COM_TRAVELENTITY_MANAGER_POINTPOSTPHOTO_EDIT'));
-    JToolBarHelper::save('pointpostphoto.save');
-    JToolBarHelper::cancel('pointpostphoto.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+    JToolBarHelper::title($isNew ? JText::_('COM_TRAVELENTITY_MANAGER_POINTPHOTO_NEW') : JText::_('COM_TRAVELENTITY_MANAGER_POINTPHOTO_EDIT'));
+    JToolBarHelper::save('pointphoto.save');
+    JToolBarHelper::cancel('pointphoto.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
   }
 }

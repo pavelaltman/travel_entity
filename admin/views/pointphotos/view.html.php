@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewPointPostPhotos extends JView
+class TravelEntityViewPointPhotos extends JView
 {
   protected $items ;
   protected $pagination ;
@@ -24,16 +24,16 @@ class TravelEntityViewPointPostPhotos extends JView
         
   protected function addToolBar()
   {
-    JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTS_POST_PHOTOS'));
-    JToolBarHelper::deleteListX('', 'pointpostphotos.delete');
-    JToolBarHelper::editListX('pointpostphoto.edit');
-    JToolBarHelper::addNewX('pointpostphoto.add');
+    JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTS_PHOTOS'));
+    JToolBarHelper::deleteListX('', 'pointphotos.delete');
+    JToolBarHelper::editListX('pointphoto.edit');
+    JToolBarHelper::addNewX('pointphoto.add');
   }      
 
 
   protected function GetPointList()
   {
-   return $this->GetModel()->aux_arrays['pointpostlist'] ;
+   return $this->GetModel()->aux_arrays['pointlist'] ;
   }
 }
 ?>
