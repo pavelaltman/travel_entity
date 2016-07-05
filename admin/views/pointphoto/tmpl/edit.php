@@ -18,3 +18,4 @@ JHtml::_('behavior.tooltip');
       <?php echo JHtml::_('form.token'); ?>
   </div>
 </form>
+<a class="modal" title="Select your image" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=59&amp;author=42&amp;fieldid=id_field&amp;folder=" rel="{handler: 'iframe', size: {x: 800, y: 500}}">Select your image</a>

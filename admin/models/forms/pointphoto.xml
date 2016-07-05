@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
   <fieldset>
-    <field
-      name="photo_article_point"
-      type="text"
-      label="COM_TRAVELENTITY_POINTPOSTPHOTO_FIELD_ARTICLEPOINT_LABEL"
-      size="10"
-      class="inputbox"
-      default=""
-    />
-    <field
+     <field
       name="photo_id"
       type="text"
-      label="COM_TRAVELENTITY_POINTPOSTPHOTO_FIELD_ID_LABEL"
+      label="COM_TRAVELENTITY_POINTPHOTO_FIELD_ID_LABEL"
       size="10"
       class="inputbox"
       default=""
-      disabled="true"
+      disabled="false"
+    />
+     <field
+      name="photo_user"
+      type="text"
+      label="COM_TRAVELENTITY_POINTPHOTO_FIELD_USER_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="false"
+    />
+     <field
+      name="photo_trip"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTPHOTO_FIELD_TRIP_LABEL"
+      size="1"
+      class="inputbox"
+      query="(select NULL AS value, 'NULL' as photo_trip from dollsfun_points.#__te_trips) union (select trip_id AS value, trip_name as photo_trip from dollsfun_points.#__te_trips)"
+      default=""
+    />
+     <field
+      name="photo_point"
+      type="text"
+      label="COM_TRAVELENTITY_POINTPHOTO_FIELD_POINT_LABEL"
+      size="10"
+      class="inputbox"
+      default=""
+      disabled="false"
     />
     <field
       name="photo_order"

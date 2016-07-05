@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 jimport('joomla.application.component.modeladmin');
 
-class TravelEntityModelPointPostPhoto extends JModelAdmin
+class TravelEntityModelPointPhoto extends JModelAdmin
 {
   public function getForm($data = array(), $loadData = true)
   {
@@ -20,7 +20,7 @@ class TravelEntityModelPointPostPhoto extends JModelAdmin
       $data = $this->getItem();
       if (!$data->get('photo_point')) 
       {
-       $data->set('photo_point', JRequest::getInt('point', $app->getUserState('com_travelentity.pointpostphotos.filter.point')));
+       $data->set('photo_point', JRequest::getInt('point', $app->getUserState('com_travelentity.pointphotos.filter.point')));
       }
     }
 

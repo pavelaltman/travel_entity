@@ -7,9 +7,12 @@ defined('_JEXEC') or die;
   <td><?php echo JHtml::_('grid.id', $i, $item->photo_id); ?></td>
   <td><?php echo $item->photo_name; ?></td>
   <td>
-  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&task=pointpostphoto.edit&photo_id=' . $item->photo_id); ?>">
+  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&task=pointphoto.edit&photo_id=' . $item->photo_id); ?>">
   <?php echo $item->photo_path; ?>
   </a>
+  </td>
+  <td>
+  <a href="<?php echo JURI::root(); ?>/images/<?php echo $item->photo_path ; ?>"> <img src="<?php echo JURI::root(); ?>/images/<?php echo $item->photo_path ; ?>" height="64"> </a>
   </td>
   </tr>
 <?php endforeach; ?>

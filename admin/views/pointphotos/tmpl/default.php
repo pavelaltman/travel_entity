@@ -3,14 +3,15 @@
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.tooltip');
+
 ?>
-<?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=pointsposts')."\">Point Posts</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointpostphotos'); ?>" method="post" name="adminForm">
+<?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=points')."\">Points</a>"; ?>
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointphotos'); ?>" method="post" name="adminForm">
   <fieldset id="filter-bar">
     <div class="filter-select fltrt">
    	<select name="filter_post_point" class="inputbox" onchange="this.form.submit()">
-		<option value=""><?php echo JText::_('TE_SELECT_POINTPOST');?></option>
-		<?php echo JHtml::_('select.options', $this->GetPointList(), 'value', 'text', 0 ? 0 : $this->state->get('filter.article_point'));?>
+		<option value=""><?php echo JText::_('TE_SELECT_POINTPHOTOS');?></option>
+		<?php echo JHtml::_('select.options', $this->GetPointList(), 'value', 'text', 0 ? 0 : $this->state->get('filter.point'));?>
 	</select>
     </div>
   </fieldset>

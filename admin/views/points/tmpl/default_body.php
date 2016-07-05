@@ -27,7 +27,7 @@ defined('_JEXEC') or die;
   </a>
   </td>
   <td>
-  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointsphotos&point_id=' . $item->point_id); ?>">
+  <a href="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointphotos&point_id=' . $item->point_id); ?>">
   <?php echo JText::_('COM_TRAVELENTITY_POINT_LIST_PHOTOSLISTLABEL'); ?>
   </a>
   </td>

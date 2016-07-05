@@ -64,8 +64,8 @@ class TravelEntityModelPoint extends JModelItem
       $db = JFactory::getDBO();
       $photos_query = new TEQuery($db) ;
       $photos_query->select('*');
-      $photos_query->from('#__te_points_posts pp,#__te_photos ph');
-      $photos_query->where('pp.post_article_point_id=ph.photo_article_point AND pp.post_point = '. (int) $id);
+      $photos_query->from('#__te_photos ph');
+      $photos_query->where('photo_point = '. (int) $id);
       $db->setQuery($photos_query); 
       $this->item['photos_arr'] = $db->loadAssocList();
       //print_r($this->item['photos_arr']) ;

@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 jimport('joomla.application.component.view');
 
-class TravelEntityViewPointPostPhoto extends JView
+class TravelEntityViewPointPhoto extends JView
 {
   public function display($tpl = null)
   {
@@ -29,6 +29,7 @@ class TravelEntityViewPointPostPhoto extends JView
     $isNew = ($this->item->photo_id == 0);
     JToolBarHelper::title($isNew ? JText::_('COM_TRAVELENTITY_MANAGER_POINTPHOTO_NEW') : JText::_('COM_TRAVELENTITY_MANAGER_POINTPHOTO_EDIT'));
     JToolBarHelper::save('pointphoto.save');
+    JToolBarHelper::save2copy('pointphoto.save2copy');
     JToolBarHelper::cancel('pointphoto.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
   }
 }
