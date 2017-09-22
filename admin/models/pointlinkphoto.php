@@ -21,9 +21,9 @@ class TravelEntityModelPointLinkPhoto extends JModelAdmin
     if(empty($data))
     {
       $data = $this->getItem();
-      if (!$data->get('point_id')) 
+      if (!$data->get('point_link_photo_id')) 
       {
-       $data->set('point_id', JRequest::getInt('point_id', $app->getUserState('com_travelentity.pointlinkphotos.filter.point_id')));
+       $data->set('link_photo_point', JRequest::getInt('link_photo_point', $app->getUserState('com_travelentity.pointlinkphotos.filter.link_photo_point')));
       }
     }
 

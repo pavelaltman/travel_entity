@@ -76,7 +76,7 @@ class TravelEntityModelPoint extends JModelItem
       $link_photos_query = new TEQuery($db) ;
       $link_photos_query->select('*');
       $link_photos_query->from('#__te_points_link_photos plp,#__te_points_link_types lt,#__te_visual_content_types vct,#__te_points_link_classes plc');
-      $link_photos_query->where('plc.link_class_id=lt.link_type_class AND vct.content_type_id=lt.link_type_content_type AND lt.link_type_id=plp.link_type AND plp.point_id = '. (int) $id);
+      $link_photos_query->where('plc.link_class_id=lt.link_type_class AND vct.content_type_id=lt.link_type_content_type AND lt.link_type_id=plp.link_type AND plp.link_photo_point = '. (int) $id);
       $link_photos_query->order('link_photo_order') ;
       $db->setQuery($link_photos_query); 
       $this->item['link_photos_arr'] = $db->loadAssocList();

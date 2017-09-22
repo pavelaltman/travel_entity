@@ -2,7 +2,7 @@
 <form>
   <fieldset>
     <field
-      name="point_id"
+      name="link_photo_point"
       type="text"
       label="COM_TRAVELENTITY_POINTLINKPHOTO_FIELD_POINT_LABEL"
       size="10"

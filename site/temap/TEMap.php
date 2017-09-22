@@ -119,7 +119,8 @@ class TEMapSystem
   $this->maps=array() ; 
 
   $document=&JFactory::getDocument();
-  $document->addScript('https://maps.google.com/maps/api/js?sensor=false') ;
+ // $document->addScript('https://maps.google.com/maps/api/js?sensor=false') ;
+  $document->addScript('https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCNwzXh5rdr7-m64ez0EoXnUG_rDsUgU60') ; // &callback=initMap
  }
  
  function AddMap($mapname,$lat,$lon,$z)

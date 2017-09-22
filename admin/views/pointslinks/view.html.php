@@ -25,7 +25,7 @@ class TravelEntityViewPointsLinks extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTS_LINKS'));
-    JToolBarHelper::deleteListX('', 'pointslink.delete');
+    JToolBarHelper::deleteListX('', 'pointslinks.delete');
     JToolBarHelper::editListX('pointslink.edit');
     JToolBarHelper::addNewX('pointslink.add');
   }      

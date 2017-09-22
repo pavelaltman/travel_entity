@@ -27,11 +27,8 @@ class TravelEntityModelPointsLinks extends JModelList
    $session = JFactory::getSession();
 
    $temp_point_id = $this->getUserStateFromRequest('com_travelentity.pointslinks.filter.link_point', 'filter_link_point');
-//   if ($temp_point_id)
-//   {
-    $this->SetPointId($temp_point_id) ;
-    $this->setState('filter.link_point', $this->point_id);
-//   }
+   $this->SetPointId($temp_point_id) ;
+   $this->setState('filter.link_point', $this->point_id);
 
    // List state information.
    parent::populateState('points_links_id', 'asc');

@@ -14,8 +14,8 @@ class TravelEntityModelPointLinkPhotos extends JModelList
   {
    if (empty($config['filter_fields'])) {
       $config['filter_fields'] = array(
-				'point_id', 'point_id',
-				'points_link_photo_id', 'point_link_photo_id',
+				'link_photo_point', 'link_photo_point',
+				'point_link_photo_id', 'point_link_photo_id',
 			);
    }
    parent::__construct($config);
@@ -26,9 +26,9 @@ class TravelEntityModelPointLinkPhotos extends JModelList
    $app = JFactory::getApplication();
    $session = JFactory::getSession();
 
-   $temp_point_id = $this->getUserStateFromRequest('com_travelentity.pointlinkphotos.filter.point_id', 'filter_point_id');
+   $temp_point_id = $this->getUserStateFromRequest('com_travelentity.pointlinkphotos.filter.link_photo_point', 'filter_link_photo_point');
    $this->SetPointId($temp_point_id) ;
-   $this->setState('filter.point_id', $this->point_id);
+   $this->setState('filter.link_photo_point', $this->point_id);
 
    // List state information.
    parent::populateState('point_link_photo_id', 'asc');
@@ -36,7 +36,7 @@ class TravelEntityModelPointLinkPhotos extends JModelList
 
   protected function getStoreId($id = '')
   {
-   $id	.= ':'.$this->getState('filter.point_id');
+   $id	.= ':'.$this->getState('filter.link_photo_point');
    return parent::getStoreId($id);
   }
  
@@ -47,10 +47,10 @@ class TravelEntityModelPointLinkPhotos extends JModelList
     if ($temp_point_id)
     {
      $this->SetPointId($temp_point_id) ;
-     $this->setState('filter.point_id', $this->point_id);
+     $this->setState('filter.link_photo_point', $this->point_id);
 
      $app = JFactory::getApplication();
-     $app->setUserState('com_travelentity.pointlinkphotos.filter.point_id',$this->point_id);
+     $app->setUserState('com_travelentity.pointlinkphotos.filter.link_photo_point',$this->point_id);
     }
 
     // Create a new query object.
@@ -63,11 +63,11 @@ class TravelEntityModelPointLinkPhotos extends JModelList
 
 
     $query = new TEQuery($db) ;
-    $query->select('point_link_photo_id,link_type,point_id,link_photo_path');
+    $query->select('point_link_photo_id,link_type,link_photo_point,link_photo_path');
     $query->from('#__te_points_link_photos');
    
-    if ($this->point_id = $this->getState('filter.point_id')) 
-      $query->where('point_id= '.$this->point_id);
+    if ($this->point_id = $this->getState('filter.link_photo_point')) 
+      $query->where('link_photo_point= '.$this->point_id);
 
     $query->select('lt.link_type_pre_label AS pre_label,lt.link_type_link_label AS link_label,lt.link_type_post_label AS post_label');
     $query->join('LEFT', '#__te_points_link_types AS lt ON lt.link_type_id = link_type');

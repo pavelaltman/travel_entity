@@ -195,7 +195,7 @@ abstract class TravelEntityModelLItem extends JModelList
   {
    $this->maps= new TEMapSystem ;
 
-   $this->marker_array=array('http://altman.kiev.ua/castle1.png','http://altman.kiev.ua/castle2.png','http://altman.kiev.ua/castle3.png') ; 
+   $this->marker_array=array('/castle1.png','/castle2.png','/castle3.png') ; 
 
    foreach($this->all_items as $i => $point) 
    {
@@ -230,7 +230,7 @@ abstract class TravelEntityModelLItem extends JModelList
     else
        $marker.='1.png';
  
-    $this->all_items[$i]->marker='http://altman.kiev.ua/'.$marker ;
+    $this->all_items[$i]->marker='/'.$marker ;
 
     $pi= (array) $point ;
     $this->all_items[$i]->point_link=GetPointNameLink($pi) ;
