@@ -28,7 +28,7 @@
       default=""
     />
     <field
-      name="option_comment"
+      name="option_point_comment"
       type="text"
       label="COM_TRAVELENTITY_TRIPSMOVESOPTIONPOINT_FIELD_COMMENT"
       size="100"

@@ -45,7 +45,7 @@ class TEMoveOption
         {
          $db = JFactory::getDBO();
          $p_query = new TEQuery($db) ;
-         $p_query->select('point_id,point_name');
+         $p_query->select('point_id,point_name,option_point_comment');
          $p_query->from('#__te_trips_moves_options_points,#__te_points');
          $p_query->where('option_point_id=point_id AND trip_move_option='.$option['trip_move_option_id']);
          $db->setQuery($p_query); 
@@ -79,6 +79,10 @@ class TEMoveOption
     $cnt=$cnt+1 ;
 
     $rstr=$rstr.GetPointNameLink($point) ;
+   
+    if (strlen($point['option_point_comment'])>0)
+    	$rstr=$rstr." (".$point['option_point_comment'].")" ;
+    
    }
    $rstr=$rstr."<br/>" ;
   }
