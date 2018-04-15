@@ -14,5 +14,8 @@ defined('_JEXEC') or die;
   <td>
   <a href="<?php echo JURI::root(); ?>/images/<?php echo $item->photo_path ; ?>"> <img src="<?php echo JURI::root(); ?>/images/<?php echo $item->photo_path ; ?>" height="64"> </a>
   </td>
+  <td>
+  <?php echo $item->point_datetime ; ?>
+  </td>
   </tr>
 <?php endforeach; ?>

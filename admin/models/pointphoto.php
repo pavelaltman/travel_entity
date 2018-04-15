@@ -31,4 +31,13 @@ class TravelEntityModelPointPhoto extends JModelAdmin
   {
     return parent::getTable($name, $prefix, $options);
   }
+  
+  protected function prepareTable($form)
+  {
+  	$path=JURI::root()."/images/".$form->photo_path ;
+  	$exif_arr=exif_read_data($path) ; 
+  	// $arrstring=print_r($exif_arr['DateTimeOriginal'],TRUE);
+  	// JFactory::getApplication()->enqueueMessage($arrstring);
+  	$form->point_datetime=$exif_arr['DateTimeOriginal'] ;
+  }
 }

@@ -15,4 +15,7 @@ defined('_JEXEC') or die;
   <th>
   <?php echo JText::_('COM_TRAVELENTITY_POINTS_LINKS_HEADING_TITLE'); ?>
   </th>
+  <th>
+  <?php echo JText::_('COM_TRAVELENTITY_POINTS_LINKS_HEADING_TITLE'); ?>
+  </th>
 </tr>

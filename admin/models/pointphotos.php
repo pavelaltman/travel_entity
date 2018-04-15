@@ -57,7 +57,7 @@ class TravelEntityModelPointPhotos extends JModelList
     $this->aux_arrays['pointlist'] = $db->loadObjectList();
 
     $query = new TEQuery($db) ;
-    $query->select('photo_id,photo_name,photo_path');
+    $query->select('photo_id,photo_name,photo_path,point_datetime');
     $query->from('#__te_photos');
    
     if ($point = $this->getState('filter.point')) 
