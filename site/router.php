@@ -75,6 +75,12 @@ function TravelEntityBuildRoute( &$query )
          $segments[] = $data['trip_alias'];
 
          unset( $query['id'] );
+         
+         if (isset($query['page']))
+         {
+          $segments[] = $query['page'];
+          unset($query['page']);
+         }
        };
 
 
@@ -204,13 +210,29 @@ function TravelEntityParseRoute( $segments )
 
                case 'trip':
                case 'trips':
-                       $vars['view'] = 'trip';
+                       //print_r($count) ;
+                       if ($count==1)
+                       {
+               	        $vars['view'] = 'trip';
 
-                       $alias = $segments[$count-1];
+                        $alias = $segments[$count-1];
   
-                       $data=TravelEntityGetTripDataByAlias($alias) ;
+                        $data=TravelEntityGetTripDataByAlias($alias) ;
                       
-                       $vars['id'] = $data['trip_id'];
+                        $vars['id'] = $data['trip_id'];
+                       }
+                       
+                       elseif ($count==2)
+                       {
+                       	$vars['view'] = 'tripphotos';
+                       
+                       	$alias = $segments[$count-2];
+                       
+                       	$data=TravelEntityGetTripDataByAlias($alias) ;
+                       
+                       	$vars['id'] = $data['trip_id'];
+                       }
+                        
                        break;
 
                case 'pointclass':
