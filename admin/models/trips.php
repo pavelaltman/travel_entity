@@ -39,7 +39,8 @@ class TravelEntityModelTrips extends JModelList
     $query = new TEQuery($db) ;
     $query->select('trip_id,trip_name');
     $query->from('#__te_trips');
-
+    $query->order('trip_start_date');
+    
     return $query;
   }
 }
