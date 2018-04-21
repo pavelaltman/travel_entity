@@ -60,7 +60,8 @@ echo "</td></tr></table>";
 // Цикл по своим фотографиям
 foreach($this->item['photos_arr'] as $i =>$photos)
 {
- echo "<img src=\"images/".$photos['photo_path']."\" alt=\"".$photos['photo_name']."\" </img>" ;
+ echo "<p>".$this->item['labs']['trip_photos_label'].": "."<a href=\"".JRoute::_('index.php?Itemid=1068&option=com_travelentity&view=trips&page=photos&id='.$photos["photo_trip"])."\">".$photos['trip_name']."</a><br>" ;
+ echo "<img src=\"images/".$photos['photo_path']."\" alt=\"".$photos['photo_name']."\" </img></p>" ;
 } 
 
 // Цикл по внешним фотографиям и другим визуальным объектам 

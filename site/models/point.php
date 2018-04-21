@@ -66,6 +66,7 @@ class TravelEntityModelPoint extends JModelItem
       $photos_query->select('*');
       $photos_query->from('#__te_photos ph');
       $photos_query->where('photo_point = '. (int) $id);
+      $photos_query->join('LEFT OUTER','#__te_trips as tr ON tr.trip_id=ph.photo_trip');
       $db->setQuery($photos_query); 
       $this->item['photos_arr'] = $db->loadAssocList();
       //print_r($this->item['photos_arr']) ;
