@@ -6,7 +6,7 @@ jimport('joomla.database');
 function query_replace($str) { return str_replace('#__te_', 'dollsfun_points.#__te_', $str) ; }
 
 
-class TEQuery extends JDatabaseQueryMySql 
+class TEQuery extends JDatabaseQueryMySqli 
 {
  protected function replace($str) { return str_replace('#__te_', 'dollsfun_points.#__te_', $str) ; }
 

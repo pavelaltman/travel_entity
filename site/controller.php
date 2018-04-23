@@ -5,6 +5,6 @@ defined('_JEXEC') or die('Restricted access');
 // import Joomla controller library
 jimport('joomla.application.component.controller');
  
-class TravelEntityController extends JController
+class TravelEntityController extends JControllerLegacy
 {
 }

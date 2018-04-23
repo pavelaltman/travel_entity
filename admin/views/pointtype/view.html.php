@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 jimport('joomla.application.component.view');
 
-class TravelEntityViewPointType extends JView
+class TravelEntityViewPointType extends JViewLegacy
 {
   public function display($tpl = null)
   {

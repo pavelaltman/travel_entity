@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewSubRegions extends JView
+class TravelEntityViewSubRegions extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewSubRegions extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_SUBREGIONS'));
-    JToolBarHelper::deleteListX('', 'subregions.delete');
-    JToolBarHelper::editListX('subregion.edit');
-    JToolBarHelper::addNewX('subregion.add');
+    JToolBarHelper::deleteList('', 'subregions.delete');
+    JToolBarHelper::editList('subregion.edit');
+    JToolBarHelper::addNew('subregion.add');
   }      
 
   protected function GetRegionList()

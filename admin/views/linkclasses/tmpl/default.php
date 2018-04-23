@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.tooltip');
 ?>
 <?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=pointslinks')."\">Points links</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=linkclasses'); ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=linkclasses'); ?>" method="post"  name="adminForm" id="adminForm">
   <table class="adminlist">
     <thead><?php echo $this->loadTemplate('head');?></thead>
     <tfoot><?php echo $this->loadTemplate('foot');?></tfoot>

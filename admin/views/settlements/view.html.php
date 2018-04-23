@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewSettlements extends JView
+class TravelEntityViewSettlements extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewSettlements extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_SETTLEMENTS'));
-    JToolBarHelper::deleteListX('', 'settlements.delete');
-    JToolBarHelper::editListX('settlement.edit');
-    JToolBarHelper::addNewX('settlement.add');
+    JToolBarHelper::deleteList('', 'settlements.delete');
+    JToolBarHelper::editList('settlement.edit');
+    JToolBarHelper::addNew('settlement.add');
   }      
 
   protected function GetSubRegionList()

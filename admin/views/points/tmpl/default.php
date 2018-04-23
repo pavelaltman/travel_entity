@@ -8,10 +8,10 @@ JHtml::_('behavior.tooltip');
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=classes')."\">Point Classes</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=descrs')."\">Descriptions</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=trips')."\">Trips</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=points'); ?>" method="post" name="adminForm">
-  <fieldset id="filter-bar">
-    <div class="filter-select fltrt">
-   	<select name="filter_country_id" class="inputbox" onchange="this.form.submit()">
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=points'); ?>" method="post" name="adminForm" id="adminForm">
+  <p style="font-size:20px"> <?php // <fieldset id="filter-bar"> ?>
+    <?php // <div class="filter-select fltrt"> ?>
+   	<select name="filter_country_id" onchange="this.form.submit()">
 		<option value=""><?php echo JText::_('TE_SELECT_COUNTRY');?></option>
 		<?php echo JHtml::_('select.options', $this->GetCountryList(), 'value', 'text', 0 ? 0 : $this->state->get('filter.country_id'));?>
 	</select>
@@ -39,14 +39,14 @@ JHtml::_('behavior.tooltip');
 		<option value=""><?php echo JText::_('TE_SELECT_POINTSUBTYPE');?></option>
 		<?php echo JHtml::_('select.options', $this->GetPointSubtypeList(), 'value', 'text', 0 ? 0 : $this->state->get('filter.point_subtype_id'));?>
 	</select>
-    </div>
-  </fieldset>
-  <div class="clr"> </div>
-  <table class="adminlist">
+    <?php // </div> </fieldset> ?> 
+   </p>
+  <?php //<div class="clr"> </div> ?>
+  <p><table> <?php // class="adminlist"> ?>
     <thead><?php echo $this->loadTemplate('head');?></thead>
-    <tfoot><?php echo $this->loadTemplate('foot');?></tfoot>
     <tbody><?php echo $this->loadTemplate('body');?></tbody>
-  </table>
+    <tfoot><?php echo $this->loadTemplate('foot');?></tfoot>
+  </table></p>
   <div>
     <input type="hidden" name="task" value="" />
     <input type="hidden" name="boxchecked" value="0" />

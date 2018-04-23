@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewTripsMoves extends JView
+class TravelEntityViewTripsMoves extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewTripsMoves extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_TRIPSMOVES'));
-    JToolBarHelper::deleteListX('', 'tripsmoves.delete');
-    JToolBarHelper::editListX('tripsmove.edit');
-    JToolBarHelper::addNewX('tripsmove.add');
+    JToolBarHelper::deleteList('', 'tripsmoves.delete');
+    JToolBarHelper::editList('tripsmove.edit');
+    JToolBarHelper::addNew('tripsmove.add');
   }      
 
   protected function GetTripList()

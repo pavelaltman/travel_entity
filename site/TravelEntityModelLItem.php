@@ -27,6 +27,8 @@ abstract class TravelEntityModelLItem extends JModelList
    $this->type_id=$_type_id;
    $this->region_id=$_region_id;
 
+   // print_r($this) ;
+   
    // получаем текстовые метки
    $this->item['labs']=TravelEntityGetTextLabels();
 

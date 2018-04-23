@@ -9,7 +9,7 @@ print_r($this->GetModel()->aux_arrays) ;
 ?>
 
 <form action="<?php echo JRoute::_('index.php?option=com_travelentity&layout=edit&settlement_id='.(int) $this->item->settlement_id); ?>"
-  method="post" name="adminForm" id="settlement-form">
+  method="post"  name="adminForm" id="adminForm">
   <fieldset class="adminform">
     <legend><?php echo JText::_('COM_TRAVELENTITY_SETTLEMENT_DETAILS'); ?></legend>
     <ul class="adminformlist">

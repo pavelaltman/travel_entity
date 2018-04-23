@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modellist');
-require_once JPATH_SITE.DS."components".DS."com_travelentity".DS."tequery.php";
+require_once JPATH_SITE."/components/com_travelentity/tequery.php";
 
 
 class TravelEntityModelPoints extends JModelList

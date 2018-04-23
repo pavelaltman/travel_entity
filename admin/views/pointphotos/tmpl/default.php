@@ -6,7 +6,7 @@ JHtml::_('behavior.tooltip');
 
 ?>
 <?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=points')."\">Points</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointphotos'); ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointphotos'); ?>" method="post"  name="adminForm" id="adminForm">
   <fieldset id="filter-bar">
     <div class="filter-select fltrt">
    	<select name="filter_post_point" class="inputbox" onchange="this.form.submit()">

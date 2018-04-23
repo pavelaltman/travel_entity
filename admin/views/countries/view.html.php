@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewCountries extends JView
+class TravelEntityViewCountries extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewCountries extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_COUNTRIES'));
-    JToolBarHelper::deleteListX('', 'countries.delete');
-    JToolBarHelper::editListX('country.edit');
-    JToolBarHelper::addNewX('country.add');
+    JToolBarHelper::deleteList('', 'countries.delete');
+    JToolBarHelper::editList('country.edit');
+    JToolBarHelper::addNew('country.add');
   }      
 }
 ?>

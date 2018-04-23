@@ -20,6 +20,7 @@ class TravelEntityModelPoint extends JModelItem
     if (!isset($this->item)) {
       $id = JRequest::getInt('id');
  
+      // print_r($id) ;
       // получаем данные о точке, подтипе, типе, классе, территории и т д
       $this->item['data']=TravelEntityGetAllPointDataById($id) ;
 
@@ -121,9 +122,14 @@ class TravelEntityModelPoint extends JModelItem
      $user =& JFactory::getUser();
      $session = JFactory::getSession();
   
-     $new_grade_id = $session->clear('grade_id') ;
-     $new_before_after = $session->clear('before_after') ;
+     // print_r($user);
+     // print_r($session);
+      
+     $new_grade_id = $session->get('grade_id') ; $session->clear('grade_id') ;
+     $new_before_after = $session->get('before_after') ; $session->clear('before_after') ;
 
+     // print_r($new_grade_id) ;
+     
      if ($new_grade_id && $user->id)
      {
       // проверяем есть ли уже оценка
@@ -134,6 +140,8 @@ class TravelEntityModelPoint extends JModelItem
       $grd_query->where('gu.user_id='.(int) $user->id.' AND gu.grade_point_id='.(int) $id);
       $db->setQuery($grd_query); 
       $old_id=$db->loadResult();
+      
+      // print_r($old_id) ;
 
       if ($old_id)
       {

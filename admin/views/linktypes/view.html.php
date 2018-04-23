@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewLinkTypes extends JView
+class TravelEntityViewLinkTypes extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewLinkTypes extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTYPES'));
-    JToolBarHelper::deleteListX('', 'linktype.delete');
-    JToolBarHelper::editListX('linktype.edit');
-    JToolBarHelper::addNewX('linktype.add');
+    JToolBarHelper::deleteList('', 'linktype.delete');
+    JToolBarHelper::editList('linktype.edit');
+    JToolBarHelper::addNew('linktype.add');
   }      
 
   protected function GetLinkClassList()

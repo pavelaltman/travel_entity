@@ -7,7 +7,7 @@ JHtml::_('behavior.tooltip');
 <?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=points')."\">Points</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=trips')."\">Trips</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=tripsstaypoints&trip_id='.$this->state->get('filter.trip_id'))."\">Trip Stay Points</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=tripsmoves'); ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=tripsmoves'); ?>" method="post"  name="adminForm" id="adminForm">
   <fieldset id="filter-bar">
     <div class="filter-select fltrt">
    	<select name="filter_trip_id" class="inputbox" onchange="this.form.submit()">

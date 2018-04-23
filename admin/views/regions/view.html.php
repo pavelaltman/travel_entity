@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewRegions extends JView
+class TravelEntityViewRegions extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewRegions extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_REGIONS'));
-    JToolBarHelper::deleteListX('', 'regions.delete');
-    JToolBarHelper::editListX('region.edit');
-    JToolBarHelper::addNewX('region.add');
+    JToolBarHelper::deleteList('', 'regions.delete');
+    JToolBarHelper::editList('region.edit');
+    JToolBarHelper::addNew('region.add');
   }      
 
   protected function GetCountryList()

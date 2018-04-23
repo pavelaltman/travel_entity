@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewLinkClasses extends JView
+class TravelEntityViewLinkClasses extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;

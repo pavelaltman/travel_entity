@@ -138,8 +138,8 @@ function TravelEntityParseRoute( $segments )
        $menu =& $app->getMenu();
        $item =& $menu->getActive();
 
-//       print_r($segments);
-//       print_r($item->query);
+       // print_r($segments);
+       // print_r($item->query);
 
        // Count segments
        $count = count( $segments );
@@ -180,7 +180,9 @@ function TravelEntityParseRoute( $segments )
                         {
                          $vars['view'] = 'point';
                          $alias = $segments[$count-1];
+                         // print_r($alias) ;
                          $data=TravelEntityGetPointDataByAlias($alias) ;
+                         // print_r($data) ;
                          $vars['id'] = $data['point_id'];
                         }
                        }
@@ -260,6 +262,7 @@ function TravelEntityParseRoute( $segments )
                         $vars['view'] = 'pointtype';
                         $country_alias = $segments[$count-2];
                         $type_alias = $segments[$count-1];
+                        //print_r($segments) ;
                         $data=TravelEntityGetCountryDataByAlias($item->query['class_id'],$country_alias,$type_alias) ;
                         $vars['type_id'] = $data['point_type_id'] ;
                         $vars['country_id'] = $data['country_id'] ;

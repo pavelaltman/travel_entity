@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.tooltip');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_travelentity&layout=edit&trip_stay_point_id='.(int) $this->item->trip_stay_point_id); ?>"
-  method="post" name="adminForm" id="tripsstaypoint-form">
+  method="post"  name="adminForm" id="adminForm">
   <fieldset class="adminform">
     <legend><?php echo JText::_('COM_TRAVELENTITY_TRIPSSTAYPOINT_DETAILS'); ?></legend>
     <ul class="adminformlist">

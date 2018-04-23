@@ -33,8 +33,9 @@ class TravelEntityModelPoint extends JModelAdmin
     return $data;
   }
  
-  public function getTable($name = 'Points', $prefix = 'TravelEntityTable', $options = array())
+  public function getTable($type = 'Points', $prefix = 'TravelEntityTable', $config = array())
   {
-    return parent::getTable($name, $prefix, $options);
+    //return parent::getTable($name, $prefix, $options);
+    return JTable::getInstance($type, $prefix, $config);
   }
 }

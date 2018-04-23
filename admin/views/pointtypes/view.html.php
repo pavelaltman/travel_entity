@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
-class TravelEntityViewPointTypes extends JView
+class TravelEntityViewPointTypes extends JViewLegacy
 {
   protected $items ;
   protected $pagination ;
@@ -25,9 +25,9 @@ class TravelEntityViewPointTypes extends JView
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTYPES'));
-    JToolBarHelper::deleteListX('', 'pointtypes.delete');
-    JToolBarHelper::editListX('pointtype.edit');
-    JToolBarHelper::addNewX('pointtype.add');
+    JToolBarHelper::deleteList('', 'pointtypes.delete');
+    JToolBarHelper::editList('pointtype.edit');
+    JToolBarHelper::addNew('pointtype.add');
   }      
 
   protected function GetPointClassList()

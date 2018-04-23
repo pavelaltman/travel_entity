@@ -8,7 +8,7 @@ JHtml::_('behavior.tooltip');
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=countries')."\">Countries</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=regions')."\">Regions</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=subregions')."\">Sub Regions</a>"; ?>
-<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=settlements'); ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=settlements'); ?>" method="post"  name="adminForm" id="adminForm">
   <fieldset id="filter-bar">
     <div class="filter-select fltrt">
    	<select name="filter_settlement_subregion" class="inputbox" onchange="this.form.submit()">

@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 jimport('joomla.application.component.controller');
 
-class TravelEntityControllerRawlinks extends JController
+class TravelEntityControllerRawlinks extends JControllerLegacy
 {
  public function addlink()
  {
