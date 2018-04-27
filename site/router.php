@@ -158,7 +158,7 @@ function TravelEntityParseRoute( $segments )
                         $country_alias = $segments[$count-4];
                         $region_alias = $segments[$count-2];
                         $type_alias = $segments[$count-1];
-                        $data=TravelEntityGetCountryDataByAlias($item->query['class_id'],$country_alias,$type_alias,$region_alias) ;
+                        $data=TravelEntityGetCountryDataByAlias(0,$country_alias,$type_alias,$region_alias) ;
                         $vars['type_id'] = $data['point_type_id'] ;
                         $vars['region_id'] = $data['region_id'] ;
                         $vars['country_id'] = $data['country_id'] ;
@@ -170,8 +170,11 @@ function TravelEntityParseRoute( $segments )
                         {
                          $vars['view'] = 'regioncountry';
                          $country_alias = $segments[$count-3];
+                         // print_r($country_alias) ;
                          $region_alias = $segments[$count-1];
-                         $data=TravelEntityGetCountryDataByAlias($item->query['class_id'],$country_alias,'',$region_alias) ;
+                         // print_r($region_alias) ;
+                         $data=TravelEntityGetCountryDataByAlias(0,$country_alias,'',$region_alias) ;
+                         // print_r($data) ;
                          $vars['region_id'] = $data['region_id'] ;
                          $vars['country_id'] = $data['country_id'] ;
                          $vars['class_id'] = $item->query['class_id']  ;

@@ -44,6 +44,9 @@ class TravelEntityModelPointsPosts extends JModelList
   protected function getListQuery()
   {
     $temp_point_id=JRequest::getInt('point_id') ;
+    
+    // JFactory::getApplication()->enqueueMessage("Point id 111: ".print_r($temp_point_id,TRUE));
+    
     if ($temp_point_id)
     {
      $this->SetPointId($temp_point_id) ;
@@ -55,12 +58,19 @@ class TravelEntityModelPointsPosts extends JModelList
 
     // Create a new query object.
     $db = JFactory::getDBO();
+    
+    // JFactory::getApplication()->enqueueMessage("Db: 222 ".print_r($db,TRUE));
+    
     $p_query = new TEQuery($db) ;
-    $p_query->select("SELECT point_id AS value, point_name AS text") ;
+    $p_query->select("point_id AS value, point_name AS text") ;
     $p_query->from("#__te_points") ;
     $db->setQuery($p_query);
+    
+    // JFactory::getApplication()->enqueueMessage("Db: 3333 ".print_r($db,TRUE));
+    
     $this->aux_arrays['pointlist'] = $db->loadObjectList();
-
+    
+    
 
     $query = new TEQuery($db) ;
     $query->select('post_article_point_id,post_point,post_article,post_menuitem');

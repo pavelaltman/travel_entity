@@ -3,6 +3,8 @@
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.tooltip');
+
+// print_r($this) ;
 ?>
 <?php echo "<a href=\"".JRoute::_('index.php?option=com_travelentity&view=points')."\">Points</a>"; ?>
 <form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=pointsposts'); ?>" method="post"  name="adminForm" id="adminForm">

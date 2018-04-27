@@ -192,7 +192,7 @@ function TravelEntityGetCountryDataByAlias($class_id,$country_alias='',$type_ali
 
  $query->select('*');
  $query->from('#__te_points p,#__te_point_subtypes pst,#__te_point_types pt,#__te_point_classes pcl,#__te_settlements setl,#__te_subregions sr,#__te_regions r,#__te_countries co');
- $wstr='r.region_country=co.country_id AND r.region_id=sr.subregion_region AND p.point_settlement=setl.settlement_id AND setl.settlement_subregion=sr.subregion_id'.($class_id ? ' AND pt.point_class='.$class_id : '').' AND pst.point_type=pt.point_type_id AND p.point_subtype=pst.point_subtype_id  AND pt.point_class=pcl.point_class_id'.(strlen($country_alias) ? ' AND co.country_alias='.$db->quote( $db->escape($country_alias)) : '').(strlen($type_alias) ? ' AND point_type_alias='.$db->quote( $db->escape($type_alias))   : '').(strlen($region_alias) ? ' AND region_alias='.$db->quote( $db->getEscaped($region_alias))   : '');
+ $wstr='r.region_country=co.country_id AND r.region_id=sr.subregion_region AND p.point_settlement=setl.settlement_id AND setl.settlement_subregion=sr.subregion_id'.($class_id ? ' AND pt.point_class='.$class_id : '').' AND pst.point_type=pt.point_type_id AND p.point_subtype=pst.point_subtype_id  AND pt.point_class=pcl.point_class_id'.(strlen($country_alias) ? ' AND co.country_alias='.$db->quote( $db->escape($country_alias)) : '').(strlen($type_alias) ? ' AND point_type_alias='.$db->quote( $db->escape($type_alias))   : '').(strlen($region_alias) ? ' AND region_alias='.$db->quote( $db->escape($region_alias))   : '');
  $query->where($wstr) ;
 
  $db->setQuery($query);
