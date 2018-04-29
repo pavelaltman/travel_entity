@@ -25,7 +25,7 @@
       label="COM_TRAVELENTITY_POINTPHOTO_FIELD_TRIP_LABEL"
       size="1"
       class="inputbox"
-      query="(select NULL AS value, 'NULL' as photo_trip from dollsfun_points.#__te_trips) union (select trip_id AS value, trip_name as photo_trip from dollsfun_points.#__te_trips)"
+      query="(select NULL AS value, 'NULL' as photo_trip, '1970-01-01' as trip_start_date from dollsfun_points.#__te_trips) union (select trip_id AS value, trip_name as photo_trip, trip_start_date from dollsfun_points.#__te_trips) order by trip_start_date"
       default=""
     />
      <field

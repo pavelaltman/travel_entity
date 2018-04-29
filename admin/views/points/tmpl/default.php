@@ -9,7 +9,7 @@ JHtml::_('behavior.tooltip');
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=descrs')."\">Descriptions</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=trips')."\">Trips</a>"; ?>
 <form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=points'); ?>" method="post" name="adminForm" id="adminForm">
-  <p style="font-size:20px"> <?php // <fieldset id="filter-bar"> ?>
+  <p style="font-size:10px"> <?php // <fieldset id="filter-bar"> ?>
     <?php // <div class="filter-select fltrt"> ?>
    	<select name="filter_country_id" onchange="this.form.submit()">
 		<option value=""><?php echo JText::_('TE_SELECT_COUNTRY');?></option>

@@ -51,7 +51,7 @@ class TravelEntityModelPointSubTypes extends JModelList
 
 
     $p_query = new TEQuery($db) ;
-    $p_query->select("SELECT point_type_id AS value, point_type_name AS text") ;
+    $p_query->select("point_type_id AS value, point_type_name AS text") ;
     $p_query->from("#__te_point_types");
     $db->setQuery($p_query);
     $this->aux_arrays['pointtypeslist'] = $db->loadObjectList();
