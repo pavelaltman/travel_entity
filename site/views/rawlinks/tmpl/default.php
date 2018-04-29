@@ -15,6 +15,11 @@ if ($this->GetModel()->user->id)
  foreach($this->items as $i => $item): 
   echo "<tr>" ;
   echo "<td><a href=\"".$item->link_text."\">".$item->link_text."</a></td>" ;
+  echo "<td><form action=\"".JRoute::_('index.php?option=com_travelentity&task=rawlinks.updatecountry&link_id='.$item->link_id)."\" method=\"post\" name=\"updatecountry\">" ;
+  echo "<select name=\"country_id\" onchange=\"this.form.submit()\"><option value=\"\">".JText::_('TE_SELECT_COUNTRY')."</option>" ;
+  echo JHtml::_('select.options', $this->GetCountryList(), 'value', 'text', $item->country_id);
+  echo "</select></form></td>" ;
+  // echo "<td><a href=\"".JRoute::_('index.php?option=com_travelentity&task=rawlinks.updatecountry&link_id='.$item->link_id."&country_id=".$item->country_id)."\">".$this->GetModel()->labs['update_label']."</a></td>" ;
   echo "<td><a href=\"".JRoute::_('index.php?option=com_travelentity&task=rawlinks.dellink&link_id='.$item->link_id)."\">".$this->GetModel()->labs['del_label']."</a></td>" ;
   echo "</tr>" ;
  endforeach;

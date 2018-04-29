@@ -21,7 +21,19 @@ class TravelEntityControllerRawlinks extends JControllerLegacy
 
   $session = JFactory::getSession();
   $session->set('del_link_id',$link_id) ;
+  
+  $this->setRedirect(JRoute::_('index.php? option=com_travelentity&view=rawlinks')); 
+ }
 
+ public function updatecountry()
+ {
+  $link_id = JRequest::getInt('link_id');
+  $country_id = JRequest::getInt('country_id');
+
+  $session = JFactory::getSession();
+  $session->set('update_country_id',$country_id) ;
+  $session->set('update_link_id',$link_id) ;
+  
   $this->setRedirect(JRoute::_('index.php? option=com_travelentity&view=rawlinks')); 
  }
 }

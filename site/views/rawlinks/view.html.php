@@ -19,5 +19,10 @@ class TravelEntityViewRawLinks extends JViewLegacy
     // Display the template
     parent::display($tpl);
   }
+  
+  function GetCountryList()
+  {
+   return $this->GetModel()->aux_arrays['countrylist'] ;
+  }
 }
 ?>

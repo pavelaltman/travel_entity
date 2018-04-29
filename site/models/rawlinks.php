@@ -13,7 +13,10 @@ class TravelEntityModelRawLinks extends JModelList
 
   protected function getListQuery()
   {
-    $this->labs=TravelEntityGetTextLabels() ;
+  	// print_r(JRequest::get($_POST));
+  	// print_r(JFactory::getSession());
+  	 
+  	$this->labs=TravelEntityGetTextLabels() ;
 
     $this->user =& JFactory::getUser();
     $db = JFactory::getDBO();
@@ -22,7 +25,7 @@ class TravelEntityModelRawLinks extends JModelList
     {
      $session = JFactory::getSession();
 
-     $new_link = $session->clear('new_link') ;
+     $new_link = $session->get('new_link') ; $session->clear('new_link') ;
      if (strlen($new_link))
      {
        $lnk = new stdClass();
@@ -31,7 +34,7 @@ class TravelEntityModelRawLinks extends JModelList
        $result = $db->insertObject(query_replace('#__te_rawlinks'), $lnk);
      }
 
-     $del_link_id = $session->clear('del_link_id') ;
+     $del_link_id = $session->get('del_link_id') ; $session->clear('del_link_id') ;
      if ($del_link_id)
      {
 
@@ -41,21 +44,45 @@ class TravelEntityModelRawLinks extends JModelList
       $dquery->where($conditions);
       $db->setQuery($dquery);
       $result = $db->query();
-      
-/*
-       $lnk = new stdClass();
-       $lnk->link_id = $del_link_id ;
-       $result = $db->deleteObject('#__te_rawlinks', $lnk);
-*/
      }
 
+     $update_country_id = $session->get('update_country_id') ; $session->clear('update_country_id') ;
+     $update_link_id = $session->get('update_link_id') ; $session->clear('update_link_id') ;
+     if ($update_country_id)
+     {
+      $dquery = new TEQuery($db) ;
+      $dquery->update('#__te_rawlinks');
+
+      $setarray = array($db->quoteName('link_country') . '='.$update_country_id);
+      $dquery->set($setarray);
+      
+      $conditions = array($db->quoteName('link_id') . '='.$update_link_id);
+      $dquery->where($conditions);
+      
+      // echo($dquery->__toString());
+         
+      $db->setQuery($dquery);
+      $result = $db->query();
+     }
     }
 
+    // Country list
+    $p_query = new TEQuery($db) ;
+    $p_query->select("country_id AS value, country_name AS text") ;
+    $p_query->from("#__te_countries");
+    $p_query->order("country_name");
+    $db->setQuery($p_query);
+    $this->aux_arrays['countrylist'] = $db->loadObjectList();
+    
+    
+    // main list query
     $query = new TEQuery($db) ;
     $query->select('*');
     $query->from('#__te_rawlinks');
     $query->where('link_user_id='.$this->user->id);
-
+    $query->join('LEFT OUTER','#__te_countries ON country_id=link_country');
+    $query->order('country_name,link_id') ;
+    
     return $query;
   }
 }

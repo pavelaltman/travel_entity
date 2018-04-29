@@ -9,7 +9,7 @@ class TravelEntityControllerPoint extends JControllerLegacy
 {
  public function setgrade()
  {
-  echo "<p>THIS IS ME SHOUTING!</p>";
+  // echo "<p>THIS IS ME SHOUTING!</p>";
   $new_grade_id = JRequest::getInt('grade_id');
   $new_before_after = JRequest::getInt('before_after');
   $point_id = JRequest::getInt('id');
@@ -18,8 +18,8 @@ class TravelEntityControllerPoint extends JControllerLegacy
   $session->set('grade_id',$new_grade_id) ;
   $session->set('before_after',$new_before_after) ;
 
-  print_r($point_id) ;
-  print_r($session) ;
+  // print_r($point_id) ;
+  // print_r($session) ;
   
   $this->setRedirect(GetPointNameRoute($point_id)); 
  }
