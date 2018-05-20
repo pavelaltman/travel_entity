@@ -3,7 +3,7 @@
 defined('_JEXEC') or die;
 jimport('joomla.application.component.controller');
 
-class TravelEntityControllerLItem extends JController
+class TravelEntityControllerLItem extends JControllerLegacy
 {
  public function change_awb()
  {

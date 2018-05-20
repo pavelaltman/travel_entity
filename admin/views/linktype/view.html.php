@@ -29,6 +29,7 @@ class TravelEntityViewLinkType extends JViewLegacy
     $isNew = ($this->item->link_type_id == 0);
     JToolBarHelper::title($isNew ? JText::_('COM_TRAVELENTITY_MANAGER_LINKTYPE_NEW') : JText::_('COM_TRAVELENTITY_MANAGER_LINKTYPE_EDIT'));
     JToolBarHelper::save('linktype.save');
+    JToolBarHelper::save2copy('linktype.save2copy');
     JToolBarHelper::cancel('linktype.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
   }
 }

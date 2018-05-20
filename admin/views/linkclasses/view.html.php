@@ -25,9 +25,9 @@ class TravelEntityViewLinkClasses extends JViewLegacy
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_LINKCLASSES'));
-    JToolBarHelper::deleteListX('', 'linkclass.delete');
-    JToolBarHelper::editListX('linkclass.edit');
-    JToolBarHelper::addNewX('linkclass.add');
+    JToolBarHelper::deleteList('', 'linkclass.delete');
+    JToolBarHelper::editList('linkclass.edit');
+    JToolBarHelper::addNew('linkclass.add');
   }      
 }
 ?>

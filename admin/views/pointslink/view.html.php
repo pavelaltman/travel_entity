@@ -29,6 +29,7 @@ class TravelEntityViewPointsLink extends JViewLegacy
     $isNew = ($this->item->points_links_id == 0);
     JToolBarHelper::title($isNew ? JText::_('COM_TRAVELENTITY_MANAGER_POINTSLINK_NEW') : JText::_('COM_TRAVELENTITY_MANAGER_POINTSLINK_EDIT'));
     JToolBarHelper::save('pointslink.save');
+    JToolBarHelper::save2new('pointslink.save2new');
     JToolBarHelper::cancel('pointslink.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
   }
 }

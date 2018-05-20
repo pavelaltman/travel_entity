@@ -25,7 +25,7 @@ class TravelEntityViewPointsPosts extends JViewLegacy
   protected function addToolBar()
   {
     JToolBarHelper::title(JText::_('COM_TRAVELENTITY_MANAGER_POINTS_POSTS'));
-    JToolBarHelper::deleteList('', 'pointspost.delete');
+    JToolBarHelper::deleteList('', 'pointsposts.delete');
     JToolBarHelper::editList('pointspost.edit');
     JToolBarHelper::addNew('pointspost.add');
   }      
