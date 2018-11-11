@@ -4,6 +4,17 @@ defined('_JEXEC') or die;
 
 global $glt ;
 
+// Альтернативный вариант адсенс
+$script_str='<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0282201064395781",
+          enable_page_level_ads: true
+     });
+</script>';
+
+echo $script_str ; 
+
 // Хлебные крошки
 echo "<table><tr><td>";
 echo "<a href=\"".JRoute::_('index.php? option=com_travelentity&view=pointclass&class_id='.$this->item['data']['point_class_id'])."\">".$this->item['data']['point_class_name_pl'.$glt]."</a>"." --> ";

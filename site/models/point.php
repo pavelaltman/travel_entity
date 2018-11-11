@@ -67,6 +67,7 @@ class TravelEntityModelPoint extends JModelItem
       $photos_query->select('*');
       $photos_query->from('#__te_photos ph');
       $photos_query->where('photo_point = '. (int) $id);
+      $photos_query->order('photo_order') ;
       $photos_query->join('LEFT OUTER','#__te_trips as tr ON tr.trip_id=ph.photo_trip');
       $db->setQuery($photos_query); 
       $this->item['photos_arr'] = $db->loadAssocList();
@@ -93,6 +94,10 @@ class TravelEntityModelPoint extends JModelItem
       $document->setTitle($this->item['data']['point_name']." - ".$this->item['labs']['sitename_label']);
       $document->setMetaData('description',$this->item['data']['point_descr']);
 
+      // AdSense
+      // $document->addScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js") ;
+      // $document->addScriptDeclaration('(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-0282201064395781",enable_page_level_ads: true});') ;
+      
       // Получаем ИД родительской точки если она есть
       if (!empty($this->item['data']['point_parent']))
       {

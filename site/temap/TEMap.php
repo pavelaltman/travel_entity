@@ -4,7 +4,7 @@ abstract class TEMap
 {
  protected $document ;
 
- public function Init($name)
+ public function InitBasic($name)
  {
   $this->document=&JFactory::getDocument();
 
@@ -25,7 +25,7 @@ class TESingleMap extends TEMap
   $this->lon=$lon;
   $this->z=$z;
 
-  parent::Init($name) ;
+  parent::InitBasic($name) ;
 
   $script= 'function initialize() {'
          . ' var latlng = new google.maps.LatLng('.$lat.','.$lon.');'
@@ -61,7 +61,7 @@ class TEArrayMap extends TEMap
 {
  public function Init($name,&$point_array,$lat_str,$lon_str,$title_str='',$link_str='',$descr_str='',$marker_str='')
  {
-  parent::Init($name) ;
+  parent::InitBasic($name) ;
 
   $script= 'function initialize() {'
          . ' var latlng1 = new google.maps.LatLng('.$point_array[0]->$lat_str.','.$point_array[0]->$lon_str.');'
