@@ -24,6 +24,7 @@ class TravelEntityModelPointsPost extends JModelAdmin
       }
     }
 
+    
     return $data;
   }
  

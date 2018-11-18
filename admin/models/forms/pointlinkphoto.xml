@@ -16,7 +16,7 @@
       size="10"
       class="inputbox"
       default=""
-      disabled="true"
+      disabled="false"
     />
     <field
       name="link_photo_order"

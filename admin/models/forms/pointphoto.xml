@@ -8,7 +8,6 @@
       size="10"
       class="inputbox"
       default=""
-      disabled="false"
     />
      <field
       name="photo_user"
@@ -17,7 +16,6 @@
       size="10"
       class="inputbox"
       default=""
-      disabled="false"
     />
      <field
       name="photo_trip"
@@ -35,7 +33,15 @@
       size="10"
       class="inputbox"
       default=""
-      disabled="false"
+    />
+     <field
+      name="photo_post"
+      type="sql"
+      label="COM_TRAVELENTITY_POINTPHOTO_FIELD_POST_LABEL"
+      size="1"
+      class="inputbox"
+      query="" 
+      default=""
     />
     <field
       name="photo_order"
