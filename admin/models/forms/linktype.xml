@@ -8,8 +8,7 @@
       size="10"
       class="inputbox"
       default=""
-      disabled="true"
-    />
+     />
     <field
       name="link_type_class"
       type="sql"

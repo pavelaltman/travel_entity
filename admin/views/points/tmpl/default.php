@@ -8,6 +8,7 @@ JHtml::_('behavior.tooltip');
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=classes')."\">Point Classes</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=descrs')."\">Descriptions</a>"; ?>
 <?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=trips')."\">Trips</a>"; ?>
+<?php echo " <a href=\"".JRoute::_('index.php?option=com_travelentity&view=pointphotos&point_id=-1')."\">Photos</a>"; ?>
 <form action="<?php echo JRoute::_('index.php?option=com_travelentity&view=points'); ?>" method="post" name="adminForm" id="adminForm">
   <p style="font-size:10px"> <?php // <fieldset id="filter-bar"> ?>
     <?php // <div class="filter-select fltrt"> ?>
