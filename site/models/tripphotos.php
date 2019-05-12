@@ -25,10 +25,16 @@ class TravelEntityModelTripPhotos extends JModelItem
       // Заполняем массив фотографий
       $db = JFactory::getDBO();
       $points_query = new TEQuery($db) ;
-      $points_query->select('*');
-      $points_query->from('#__te_photos');
+      $points_query->select('p.*');
+      $points_query->from('#__te_photos p');
       $points_query->where('photo_trip='.$id);
-      $points_query->order('point_datetime');
+
+      $points_query->select('point_name'); $points_query->join('LEFT', '#__te_points ON point_id = photo_point');
+      $points_query->join('LEFT', '#__te_points_posts ON post_article_point_id = photo_post');
+      $points_query->select('m.title as menutitle, m.id as menuid'); $points_query->join('LEFT', '#__menu AS m ON m.id = post_menuitem');
+      $points_query->select('c.title as articletitle, c.id as articleid'); $points_query->join('LEFT', '#__content AS c ON c.id = post_article');
+      
+      $points_query->order('photo_post,point_datetime');
       $db->setQuery($points_query);
       $this->item['photos_arr'] = $db->loadAssocList();
       
@@ -37,6 +43,16 @@ class TravelEntityModelTripPhotos extends JModelItem
       // Заполняем мета-данные
       $document=&JFactory::getDocument();
       $document->setTitle($this->item['data']['trip_name']." - ".$this->item['labs']['sitename_label']);
+      
+      // Стили для горизонтального расположения фото
+      $style =  '.column {float: left; padding: 5px; }' ;
+      $document->addStyleDeclaration( $style );
+      $style =  '.row::after { content: ""; clear: both; display: table; }' ;
+      $document->addStyleDeclaration( $style );
+      
+      $style =  'img {height: 180px; }' ;
+      $document->addStyleDeclaration( $style );
+      
     }
     return $this->item;
   }
